@@ -1,0 +1,6 @@
+---
+- name: ensure scope is present
+  get_url: url=https://git.io/scope dest={{ scope_bin }}
+
+- name: ensure scope script is executable
+  file: path={{ scope_bin }} mode="a+x"
